@@ -17,6 +17,12 @@
   <title>e-commerce</title>
 </head>
 <style>
+  /*:root {
+    -- Orange: hsl(26, 100%, 55%)
+    -- Pale orange: hsl(25, 100%, 94%)
+  }
+*/
+
   * {
     margin: 0;
     padding: 0;
@@ -41,7 +47,7 @@
   }
 
   .header {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgb(203, 191, 191);
 
   }
 
@@ -57,7 +63,7 @@
 
   .titleAndMenu p:hover {
 
-    color: #f54904e1;
+    color: rgb(189, 189, 222);
   }
 
   .header header {
@@ -77,19 +83,98 @@
 
   }
 
-#imageSneakers{
+  #imageSneakers {
 
-  max-width: 400px;
-  border-radius: 10px;
+    max-width: 400px;
+    border-radius: 10px;
+    margin-left:10rem;
+    margin-top: 5rem;
+  }
+
+  .groupImages img {
+    max-width: 85px;
+    border-radius: 10px;
+    
+    
+  }
+
+  .groupImages {
+    max-width: 120px;
+    display:flex;
+     gap:1.25rem;
+     margin-top: 25px;
+     margin-left:10rem;
+  }
+
+  .information h1{
+   font-weight: 550;
+   margin-top: 5px;
+  
+  }
+#company{
+  font-size: smaller;
+  font-family: italic;
+  color: rgb(208, 139, 11)
+
 }
 
-.groupImages img{
-max-width:80px ;
-border-radius: 10px;
+.containerCorpo {
+  
+  display:flex;
+  width: 100%;
+  gap: 2rem;
+
 }
 
-.groupImages{
-  max-width: 50px ;
+.descriptionProducts{
+  margin-left: 8rem;
+  margin-top: 8rem;
+  align-items: left;
+  width:450px;
+  display:flex;
+}
+
+.text {
+  color:rgb(121, 111, 111)
+}
+
+.desc {
+  font-size: small;
+  color: rgb(174, 160, 160)
+}
+
+.imagem{
+  max-width: 35px; 
+}
+
+button{
+padding-right:15px;
+padding-left: 15px;
+padding-top: 0.5px;
+padding-bottom:0.5px ;
+border-color: white;
+background-color: white;
+align-items: center;
+border-radius: 4px;
+color:rgb(217, 150, 24);
+
+}
+
+.btn_cart{
+border-radius: 4px;
+padding: 10px 30px 10px 30px;
+margin-left: 82px;
+background-color: white;
+border-width: 0px;
+}
+
+.buyitimage{
+width:150px;
+}
+
+.line{
+
+  margin-top: 55px;
 }
 </style>
 
@@ -112,9 +197,10 @@ border-radius: 10px;
     </header>
   </div>
 
-  <div class="container mt-5">
+  <div class="containerCorpo" mt-5>
+    
     <div class="picSneakers">
-      <img id="imageSneakers"src="./images/image-product-1.jpg" alt="">
+      <img id="imageSneakers" src="./images/image-product-1.jpg" alt="">
       <div class="groupImages">
         <img src="./images/image-product-1-thumbnail.jpg" alt="">
         <img src="./images/image-product-2-thumbnail.jpg" alt="">
@@ -125,11 +211,27 @@ border-radius: 10px;
     </div>
 
     <div class="descriptionProducts">
-
-
+      <div class="title">
+        <p id="company">SNEAKER COMPANY</p>
+        <p><h1> Fall Limited Edition</h1>
+        <h1>Sneakers</h1></p></br>
+        <p class="text">These low-profile sneakers are your perfect causal wear companion.Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.
+        </p></br>
+        <p class="price"> $125.00  <img class="imagem" src="./images/descontologo.png" alt="discount"></p>
+        <h1 class="desc"><s>$250.00</s></h1>
+        <button> + </button><input type="number" placeholder="0" min="1" max="10"><button> - </button><button class="btn_cart" type="submit"><img class="buyitimage"src="./images/buyitimage.jpg" alt="buy it!"></button>
+      
     </div>
-
+    
+    
+    </div>
+    
   </div>
+
+  <hr class=" line"/>
+
+ 
+
 </body>
 
 </html>
